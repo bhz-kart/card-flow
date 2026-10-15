@@ -9,20 +9,20 @@
 <meta name="apple-mobile-web-app-title" content="Karta">
 <meta name="theme-color" content="#000000">
 <title>Karta Prototypes</title>
-<link rel="stylesheet" href="./assets/index-CN4WXsFi.css">
+<link rel="stylesheet" href="./assets/index-CJhXPdEC.css">
 <style>
 :root { --page-bg: #f2f2f2; color-scheme: light; }
 body { background: var(--page-bg); }
 /* A dark screen (Card widget) must not show the light page colour in the
    phone's bottom safe-area band under it. */
-:root:has(.proto-card-widget-theme, .proto-flow2-card-widget-theme) { --page-bg: var(--color-base-black); color-scheme: dark; }
+:root:has(.proto-card-widget-theme, .proto-flow2-card-widget-theme, .proto-card-order-theme) { --page-bg: var(--color-base-black); color-scheme: dark; }
 
 /* Phone-sized screens: drop the iPhone mockup and let the prototype fill
    the real screen. The phone draws its own status bar and home bar, so the
    mockup's copies are hidden; the screen keeps their space. */
 @media (max-width: 500px) {
   .prototype-viewport { padding: 0; min-height: 100dvh; }
-  :root:has(.proto-card-widget-theme, .proto-flow2-card-widget-theme) .prototype-viewport { background: transparent; }
+  :root:has(.proto-card-widget-theme, .proto-flow2-card-widget-theme, .proto-card-order-theme) .prototype-viewport { background: transparent; }
   .prototype-device { padding: 0; border-radius: 0; box-shadow: none; background: transparent; width: 100%; }
   .prototype-device__island,
   .prototype-device__button,
@@ -52,6 +52,6 @@ body { background: var(--page-bg); }
     new MutationObserver(clear).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
   })();
 </script>
-<script type="module" src="./assets/index-UFo6KImw.js"></script>
+<script type="module" src="./assets/index-hXuH5dzH.js"></script>
 </body>
 </html>
